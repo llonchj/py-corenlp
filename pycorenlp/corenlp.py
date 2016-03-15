@@ -23,7 +23,7 @@ class StanfordCoreNLP:
             self.server_url, params={
                 'properties': str(properties)
             }, data=text)
-        output = r.text
+        output = r.content
         if ('outputFormat' in properties
              and properties['outputFormat'] == 'json'):
             try:
